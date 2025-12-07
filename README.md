@@ -38,11 +38,11 @@ Implemented full-text search across Customer Name and Phone Number fields with d
 - Works seamlessly with other filters
 
 ### Key Features
-- ✅ Case-insensitive search
-- ✅ Partial matching support
-- ✅ Debounced for performance (500ms)
-- ✅ Works alongside filters and sorting
-- ✅ Maintains state during pagination
+-  Case-insensitive search
+-  Partial matching support
+-  Debounced for performance (500ms)
+-  Works alongside filters and sorting
+-  Maintains state during pagination
 
 ### Performance
 - Debouncing reduces API calls from ~10/second to ~2/second during typing
@@ -109,12 +109,12 @@ Multi-select filtering system supporting 7 different filter types that work inde
 ```
 
 ### Key Features
-- ✅ Multiple filters work simultaneously (AND logic)
-- ✅ Maintain filter state across pagination
-- ✅ Visual indicators for active filters
-- ✅ Reset all filters with one click
-- ✅ Dropdown stays open during multi-select
-- ✅ Filters work with search and sort
+-  Multiple filters work simultaneously (AND logic)
+-  Maintain filter state across pagination
+-  Visual indicators for active filters
+-  Reset all filters with one click
+-  Dropdown stays open during multi-select
+-  Filters work with search and sort
 
 ### Performance
 - Filtering 1M records with multiple filters: <400ms
@@ -156,12 +156,12 @@ else → string.toLowerCase() comparison
 ```
 
 ### Key Features
-- ✅ Multi-type support (string, number, date)
-- ✅ Ascending/descending toggle
-- ✅ Visual sort indicators
-- ✅ Preserves active filters and search
-- ✅ Efficient sorting algorithm
-- ✅ Consistent sort order
+-  Multi-type support (string, number, date)
+-  Ascending/descending toggle
+-  Visual sort indicators
+-  Preserves active filters and search
+-  Efficient sorting algorithm
+-  Consistent sort order
 
 ### Performance
 - Sorting 1M records: <250ms
@@ -205,13 +205,13 @@ Page near end: [1 ... 96 97 98 99 100]
 ```
 
 ### Key Features
-- ✅ **10 items per page** (assignment requirement)
-- ✅ Previous/Next navigation
-- ✅ Direct page selection
-- ✅ Smart ellipsis for large datasets
-- ✅ Preserves filters, search, and sort
-- ✅ Shows total results count
-- ✅ Disabled states for navigation boundaries
+-  **10 items per page** (assignment requirement)
+-  Previous/Next navigation
+-  Direct page selection
+-  Smart ellipsis for large datasets
+-  Preserves filters, search, and sort
+-  Shows total results count
+-  Disabled states for navigation boundaries
 
 ### Performance
 - Page navigation: <200ms
@@ -284,7 +284,7 @@ npm run dev
 
 ### First Run Notes
 
-⚠️ **Important**: The backend takes 30-60 seconds to load the CSV file (224MB, 1M+ records) into memory on first start.
+ **Important**: The backend takes 30-60 seconds to load the CSV file (224MB, 1M+ records) into memory on first start.
 
 You'll see: `"Loaded 1000002 records"` when ready.
 
