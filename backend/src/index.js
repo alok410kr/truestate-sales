@@ -6,7 +6,14 @@ const { loadCSVData } = require('./services/dataService');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://truestate-sales.vercel.app',
+    'https://truestate-sales-*.vercel.app' // All preview deployments
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Health check route
