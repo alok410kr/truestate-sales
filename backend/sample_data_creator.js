@@ -38,10 +38,6 @@ async function createSampleData() {
 
   writeStream.end();
 
-  console.log(`✅ Sample data created successfully!`);
-  console.log(`   Input: ${lineCount} records`);
-  console.log(`   Output: ${writtenCount} records`);
-  console.log(`   File: ${outputFile}`);
 }
 
 createSampleData().catch(console.error);
