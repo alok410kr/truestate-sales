@@ -304,7 +304,6 @@ root/
 │   └── README.md
 ├── docs/
 │   └── architecture.md
-├── truestate_assignment_dataset.csv
 ├── package.json
 └── README.md
 ```
