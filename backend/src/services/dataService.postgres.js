@@ -123,7 +123,7 @@ async function getSalesData(filters, sortBy = 'customer_name', sortOrder = 'asc'
     const dataQuery = `
       SELECT 
         transaction_id as "Transaction ID",
-        date as "Date",
+        TO_CHAR(date, 'YYYY-MM-DD') as "Date",
         customer_id as "Customer ID",
         customer_name as "Customer Name",
         phone_number as "Phone Number",
@@ -133,6 +133,7 @@ async function getSalesData(filters, sortBy = 'customer_name', sortOrder = 'asc'
         product_category as "Product Category",
         quantity as "Quantity",
         total_amount as "Total Amount",
+        final_amount as "Final Amount",
         product_id as "Product ID",
         employee_name as "Employee Name"
       FROM sales

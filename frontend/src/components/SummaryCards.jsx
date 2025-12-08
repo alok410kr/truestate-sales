@@ -4,10 +4,13 @@ function SummaryCards({ data }) {
   // Calculate summary statistics
   const totalUnits = data.reduce((sum, item) => sum + (parseInt(item['Quantity']) || 0), 0)
   const totalAmount = data.reduce((sum, item) => sum + (parseFloat(item['Total Amount']) || 0), 0)
+  
+  // Calculate total discount correctly
   const totalDiscount = data.reduce((sum, item) => {
-    const amount = parseFloat(item['Total Amount']) || 0
-    const finalAmount = parseFloat(item['Final Amount']) || 0
-    return sum + (amount - finalAmount)
+    const totalAmt = parseFloat(item['Total Amount']) || 0
+    const finalAmt = parseFloat(item['Final Amount']) || 0
+    const discount = totalAmt - finalAmt
+    return sum + discount
   }, 0)
 
   const formatCurrency = (amount) => {
