@@ -1,3 +1,5 @@
+// Its the main compo of the app....
+
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import config from './config'
