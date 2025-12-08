@@ -19,6 +19,7 @@
 4. **Copy this URL** (you'll need it for testing)
 
 The URL looks like:
+
 ```
 postgresql://postgres:xxxxx@containers-us-west-xxx.railway.app:7890/railway
 ```
@@ -28,11 +29,13 @@ postgresql://postgres:xxxxx@containers-us-west-xxx.railway.app:7890/railway
 Railway automatically shares `DATABASE_URL` between services in the same project.
 
 **Verify:**
+
 1. Click on your **backend service** (not the database)
 2. Go to **"Variables"** tab
 3. You should see `DATABASE_URL` there too ✅
 
 If not, add it manually:
+
 - Click **"New Variable"**
 - **Reference**: Choose PostgreSQL → DATABASE_URL
 
@@ -45,6 +48,7 @@ git push
 ```
 
 Railway will:
+
 1. Detect the push
 2. Start new deployment
 3. Install dependencies (including `pg` package)
@@ -59,6 +63,7 @@ Railway will:
 ### Step 5: Watch Deployment
 
 In Railway dashboard:
+
 1. Click on backend service
 2. Go to **"Deployments"** tab
 3. Watch the logs:
@@ -82,11 +87,13 @@ Imported 2000 records...
 Once deployment succeeds:
 
 **Test Health:**
+
 ```
 https://loyal-mindfulness-production-422f.up.railway.app/api/health
 ```
 
 **Expected Response:**
+
 ```json
 {
   "status": "ok",
@@ -101,6 +108,7 @@ If you see `"database": "PostgreSQL"` - **SUCCESS!** ✅
 ### Step 7: Test Your App
 
 Open your Vercel app:
+
 ```
 https://truestate-sales.vercel.app/
 ```
@@ -134,20 +142,24 @@ Should now work with PostgreSQL database! 🎉
 ## 🆘 Troubleshooting
 
 **"Database is still initializing"**
+
 - Wait 2-3 minutes for first-time CSV import
 - Check Railway logs for progress
 
 **Can't see DATABASE_URL in backend**
+
 - Click backend service → Variables
 - Click "New Variable" → "Reference"
 - Select PostgreSQL service → DATABASE_URL
 
 **Import stuck or taking too long**
+
 - Check Railway logs in Deployments tab
 - First import takes ~30 seconds for 10k records
 - If stuck, click "Redeploy"
 
 **Want to rollback to CSV?**
+
 - Change railway.json start command back to:
   ```
   "startCommand": "cd backend && node --max-old-space-size=4096 src/index.js"
@@ -160,6 +172,7 @@ Should now work with PostgreSQL database! 🎉
 ## 💰 Cost
 
 Railway PostgreSQL:
+
 - **Free Tier**: 512MB RAM, 1GB storage
 - **Your Data**: ~5MB (10k records)
 - **Perfect for**: This assignment
@@ -170,4 +183,3 @@ Railway PostgreSQL:
 **Ready? Go to Railway dashboard and add PostgreSQL!** 🚀
 
 Then push: `git push`
-
